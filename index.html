@@ -1646,81 +1646,132 @@
 </section>
 
 
+```html
+<!-- ==================== CONTACT ==================== -->
 
-  <!-- CONTACT -->
+<section id="contact" class="contact-section">
 
-<section id="contact">
-     <div class="contact-terminal">
-        <span class="terminal-green">zisan@kali:~$</span>
-        <span>./contact --secure</span>
-    </div>
+    <p class="terminal contact-terminal">
+        zisan@kali:~$ ./contact --secure
+    </p>
 
-    <h2 class="section-title">Let's Connect</h2>
+    <h2 class="contact-title">Let's Connect</h2>
 
-    <div class="contact-box">
+    <div class="contact-container">
 
-        <p class="contact-intro">
-            Interested in cybersecurity, CTFs, or collaboration?
-            Feel free to reach out.
-        </p>
+        <!-- LEFT: CONTACT INFO -->
+        <div class="contact-info">
 
-        <div class="contact-links">
+            <p class="contact-description">
+                Interested in cybersecurity, CTFs, internships,
+                or research collaboration? Feel free to reach out.
+                I'd be happy to connect!
+            </p>
 
-            <a href="mailto:jisantarif55@gmail.com" class="contact-link">
-                <span class="contact-icon">✉</span>
-                <div>
-                    <strong>Email</strong>
-                    <small>jisantarif55@gmail.com</small>
-                </div>
+            <a href="mailto:jisantarif55@gmail.com"
+               class="contact-email">
+                jisantarif55@gmail.com
             </a>
 
-            <a href="https://github.com/Tarifzisan"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
+            <div class="contact-buttons">
 
-                <span class="contact-icon">⌘</span>
+                <!-- CV: replace with your actual CV file -->
+                <a href="mailto:jisantarif55@gmail.com"
+                    class="contact-btn primary">
+                     Contact Me ↗
+                  </a>
 
-                <div>
-                    <strong>GitHub</strong>
-                    <small>github.com/Tarifzisan</small>
+                <a href="https://github.com/Tarifzisan"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub ↗
+                </a>
+
+                <a href="https://www.linkedin.com/in/tarif-bin-belal-zisan-a32646329/"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn ↗
+                </a>
+
+                <a href="https://medium.com/@jisantarif55"
+                   class="contact-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Medium ↗
+                </a>
+
+            </div>
+
+            <div class="community-links">
+
+                <p class="community-heading">COMMUNITY & ACTIVITIES</p>
+
+                <a href="https://www.facebook.com/share/p/19WSntUVtN/">▸ Organizer — MIST Talent Hunt 2026 ↗</a>
+                <a href="https://www.facebook.com/share/p/199KHAk2oJ/">▸  Organizer — MIST CYBER CHALLENGE 2026 ↗</a>
+                <a href="https://www.facebook.com/share/p/1BX3SMWpfG/">▸ Organizer — Modern Cloud, DevOps & Security course ↗</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT: CONTACT FORM -->
+        <div class="contact-form-box">
+
+            <form action="https://formspree.io/f/mqpeqova"
+                  method="POST">
+
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
                 </div>
 
-            </a>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
 
-            <a href="https://www.linkedin.com/in/tarif-bin-belal-zisan-a32646329/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
-
-                <span class="contact-icon">in</span>
-
-                <div>
-                    <strong>LinkedIn</strong>
-                    <small>Connect professionally</small>
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
                 </div>
 
-            </a>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
 
-            <a href="https://medium.com/@jisantarif55"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
-
-                <span class="contact-icon">M</span>
-
-                <div>
-                    <strong>Medium</strong>
-                    <small>Read my cybersecurity writeups</small>
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="5"
+                        minlength="10"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
                 </div>
 
-            </a>
+                <button type="submit" class="contact-submit">
+                    Send Message →
+                </button>
+
+            </form>
 
         </div>
 
     </div>
 
 </section>
+```
 
 
     <!-- ==================== FOOTER ==================== -->
