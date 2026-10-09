@@ -1913,6 +1913,12 @@ nav {
    CONTACT
 ========================================================= */
 
+.contact-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
 .contact-box {
     background: rgba(12, 18, 16, 0.9);
 
