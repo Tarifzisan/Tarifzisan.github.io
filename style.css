@@ -3342,57 +3342,27 @@ section,
 }
 
 
-
 /* =========================================================
-   MOBILE CENTER FIX (keep at the very end of style.css)
+   MOBILE FIX (paste at the very end of style.css)
 ========================================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-section,
-nav,
-footer {
-    width: 100%;
-    max-width: 100%;
-}
 
 .hero > *,
 .about-layout > *,
-.contact-container > *,
-.skills-container > *,
-.featured-achievements > *,
-.achievement-stats > * {
+.contact-container > * {
     min-width: 0;
-    max-width: 100%;
 }
 
-input,
-textarea {
-    max-width: 100%;
-    min-width: 0;
+.terminal-body {
+    overflow-x: auto;
+    word-break: break-word;
 }
 
 @media (max-width: 1000px) {
-    .about-layout,
-    .contact-container {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .featured-achievements {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .achievement-stats {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .education-card {
-        max-width: 100%;
+    .featured-achievements {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -3408,7 +3378,7 @@ textarea {
     }
 
     .hero {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
         gap: 40px;
         padding: 70px 20px 40px;
         min-height: auto;
@@ -3418,46 +3388,33 @@ textarea {
     .hero h2 { font-size: 20px; }
     .intro   { font-size: 16px; }
 
-    .hero-content,
-    .hero-terminal-box,
-    .education-card,
-    .contact-form-box {
-        width: 100%;
-        max-width: 100%;
-    }
-
     .buttons {
         flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .terminal-body {
-        overflow-x: auto;
-        word-break: break-word;
-    }
-
-    .skills-container,
-    .featured-achievements {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 18px;
+        align-items: flex-start;
     }
 
     .achievement-stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    .achievement-timeline { padding-left: 35px; }
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-achievements {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .achievement-timeline {
+        padding-left: 35px;
+    }
     .achievement-timeline::before { left: 10px; }
     .timeline-node { left: -30px; }
 
     .timeline-content {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
         gap: 8px;
         padding: 20px;
     }
@@ -3466,8 +3423,6 @@ textarea {
         justify-content: flex-start;
         margin-top: 10px;
     }
-
-    .contact-section { padding: 65px 20px; }
 }
 
 @media (max-width: 480px) {
@@ -3477,7 +3432,7 @@ textarea {
     }
 
     .achievement-stats {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .timeline-node {
@@ -3489,10 +3444,8 @@ textarea {
     .gallery-item { height: 240px; }
 
     .certificate-grid {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
     }
-
-    .contact-form-box { padding: 22px 17px; }
 }
 
 ```
