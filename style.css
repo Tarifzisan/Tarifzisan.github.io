@@ -3341,4 +3341,112 @@ section,
     }
 }
 
+
+
+/* =========================================================
+   MOBILE FIX (paste at the very end of style.css)
+========================================================= */
+
+.hero > *,
+.about-layout > *,
+.contact-container > * {
+    min-width: 0;
+}
+
+.terminal-body {
+    overflow-x: auto;
+    word-break: break-word;
+}
+
+@media (max-width: 1000px) {
+    .achievement-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .featured-achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 20px 40px;
+        min-height: auto;
+    }
+
+    .hero h1 { font-size: 50px; }
+    .hero h2 { font-size: 20px; }
+    .intro   { font-size: 16px; }
+
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .achievement-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-achievements {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .achievement-timeline {
+        padding-left: 35px;
+    }
+    .achievement-timeline::before { left: 10px; }
+    .timeline-node { left: -30px; }
+
+    .timeline-content {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .timeline-action {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .achievement-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-node {
+        left: -27px;
+        width: 9px;
+        height: 9px;
+    }
+
+    .gallery-item { height: 240px; }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 ```
