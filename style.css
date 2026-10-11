@@ -3344,26 +3344,55 @@ section,
 
 
 /* =========================================================
-   MOBILE FIX (paste at the very end of style.css)
+   MOBILE CENTER FIX (keep at the very end of style.css)
 ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section,
+nav,
+footer {
+    width: 100%;
+    max-width: 100%;
+}
 
 .hero > *,
 .about-layout > *,
-.contact-container > * {
+.contact-container > *,
+.skills-container > *,
+.featured-achievements > *,
+.achievement-stats > * {
+    min-width: 0;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    max-width: 100%;
     min-width: 0;
 }
 
-.terminal-body {
-    overflow-x: auto;
-    word-break: break-word;
-}
-
 @media (max-width: 1000px) {
-    .achievement-stats {
-        grid-template-columns: repeat(3, 1fr);
+    .about-layout,
+    .contact-container {
+        grid-template-columns: minmax(0, 1fr);
     }
+
     .featured-achievements {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .education-card {
+        max-width: 100%;
     }
 }
 
@@ -3379,7 +3408,7 @@ section,
     }
 
     .hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 40px;
         padding: 70px 20px 40px;
         min-height: auto;
@@ -3389,33 +3418,46 @@ section,
     .hero h2 { font-size: 20px; }
     .intro   { font-size: 16px; }
 
+    .hero-content,
+    .hero-terminal-box,
+    .education-card,
+    .contact-form-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
-    .achievement-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 
-    .skills-container {
-        grid-template-columns: 1fr;
+    .terminal-body {
+        overflow-x: auto;
+        word-break: break-word;
     }
 
+    .skills-container,
     .featured-achievements {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 18px;
     }
 
-    .achievement-timeline {
-        padding-left: 35px;
+    .achievement-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
+
+    .achievement-timeline { padding-left: 35px; }
     .achievement-timeline::before { left: 10px; }
     .timeline-node { left: -30px; }
 
     .timeline-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 8px;
         padding: 20px;
     }
@@ -3424,6 +3466,8 @@ section,
         justify-content: flex-start;
         margin-top: 10px;
     }
+
+    .contact-section { padding: 65px 20px; }
 }
 
 @media (max-width: 480px) {
@@ -3433,7 +3477,7 @@ section,
     }
 
     .achievement-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .timeline-node {
@@ -3445,8 +3489,10 @@ section,
     .gallery-item { height: 240px; }
 
     .certificate-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
+
+    .contact-form-box { padding: 22px 17px; }
 }
 
 ```
